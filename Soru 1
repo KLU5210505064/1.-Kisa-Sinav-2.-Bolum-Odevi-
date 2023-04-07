@@ -5,7 +5,7 @@
 
 int img1[N][N], img2[N][N], diff[N][N];
 
-// Fonksiyon, iki matris arasýndaki farký hesaplar.
+// Fonksiyon, iki matris arasýndaki farkı hesaplar.
 void calculate_diff() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -14,7 +14,7 @@ void calculate_diff() {
     }
 }
 
-// Ýki matris arasýndaki farkýn toplamýný hesaplar.
+// iki matris arasındaki farkın toplamını hesaplar.
 int calculate_sum() {
     int sum = 0;
     for (int i = 0; i < N; i++) {
@@ -26,9 +26,9 @@ int calculate_sum() {
 }
 
 int main() {
-    // img1 ve img2 matrislerinin deðerleri burada atanýr.
+    // img1 ve img2 matrislerinin değerleri burada atanır.
 
-    // En uygun kaydýrma yönünü bulmak için dört adet fark matrisi hesaplanýr.
+    // En uygun kaydırma yönünü bulmak için dört adet fark matrisi hesaplanır.
     int left_sum, right_sum, up_sum, down_sum;
 
     // Sol yönde kaydýrma yapýlýr.
@@ -42,11 +42,11 @@ int main() {
         left_sum = calculate_sum();
     }
 
-    // Benzer þekilde, diðer üç yönde kaydýrma yapýlýr.
-    // En iyi kaydýrma yönü, fark matrisinin toplamýný en düþük olanýdýr.
-    // En uygun kaydýrma yönüne göre img1 kaydýrýlýr.
+    // Benzer şekilde, diğer üç yönde kaydırma yapılır.
+    // En iyi kaydýrma yönü, fark matrisinin toplamını en düşük olanıdır.
+    // En uygun kaydırma yönüne göre img1 kaydırılır.
 
-    // Ýki matris arasýndaki en iyi eþleþme bulunur.
+    // İki matris arasındaki en iyi eşleşme bulunur.
 
     return 0;
 }
