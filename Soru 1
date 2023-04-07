@@ -5,7 +5,7 @@
 
 int img1[N][N], img2[N][N], diff[N][N];
 
-// Fonksiyon, iki matris arasındaki farkı hesaplar.
+// Fonksiyon, iki matris arasÃ½ndaki farkÃ½ hesaplar.
 void calculate_diff() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -14,7 +14,7 @@ void calculate_diff() {
     }
 }
 
-// İki matris arasındaki farkın toplamını hesaplar.
+// Ãki matris arasÃ½ndaki farkÃ½n toplamÃ½nÃ½ hesaplar.
 int calculate_sum() {
     int sum = 0;
     for (int i = 0; i < N; i++) {
@@ -26,12 +26,12 @@ int calculate_sum() {
 }
 
 int main() {
-    // img1 ve img2 matrislerinin değerleri burada atanır.
+    // img1 ve img2 matrislerinin deÃ°erleri burada atanÃ½r.
 
-    // En uygun kaydırma yönünü bulmak için dört adet fark matrisi hesaplanır.
+    // En uygun kaydÃ½rma yÃ¶nÃ¼nÃ¼ bulmak iÃ§in dÃ¶rt adet fark matrisi hesaplanÃ½r.
     int left_sum, right_sum, up_sum, down_sum;
 
-    // Sol yönde kaydırma yapılır.
+    // Sol yÃ¶nde kaydÃ½rma yapÃ½lÃ½r.
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             if (j > 0) {
@@ -42,11 +42,11 @@ int main() {
         left_sum = calculate_sum();
     }
 
-    // Benzer şekilde, diğer üç yönde kaydırma yapılır.
-    // En iyi kaydırma yönü, fark matrisinin toplamını en düşük olanıdır.
-    // En uygun kaydırma yönüne göre img1 kaydırılır.
+    // Benzer Ã¾ekilde, diÃ°er Ã¼Ã§ yÃ¶nde kaydÃ½rma yapÃ½lÃ½r.
+    // En iyi kaydÃ½rma yÃ¶nÃ¼, fark matrisinin toplamÃ½nÃ½ en dÃ¼Ã¾Ã¼k olanÃ½dÃ½r.
+    // En uygun kaydÃ½rma yÃ¶nÃ¼ne gÃ¶re img1 kaydÃ½rÃ½lÃ½r.
 
-    // İki matris arasındaki en iyi eşleşme bulunur.
+    // Ãki matris arasÃ½ndaki en iyi eÃ¾leÃ¾me bulunur.
 
     return 0;
 }
