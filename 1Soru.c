@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define N 10
+
+int img1[N][N], img2[N][N], diff[N][N];
+
+// Fonksiyon, iki matris arasýndaki farký hesaplar.
+void calculate_diff() {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            diff[i][j] = abs(img1[i][j] - img2[i][j]);
+        }
+    }
+}
+
+// Ýki matris arasýndaki farkýn toplamýný hesaplar.
+int calculate_sum() {
+    int sum = 0;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            sum += diff[i][j];
+        }
+    }
+    return sum;
+}
+
+int main() {
+    // img1 ve img2 matrislerinin deðerleri burada atanýr.
+
+    // En uygun kaydýrma yönünü bulmak için dört adet fark matrisi hesaplanýr.
+    int left_sum, right_sum, up_sum, down_sum;
+
+    // Sol yönde kaydýrma yapýlýr.
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (j > 0) {
+                img1[i][j-1] = img1[i][j];
+            }
+        }
+        calculate_diff();
+        left_sum = calculate_sum();
+    }
+
+    // Benzer þekilde, diðer üç yönde kaydýrma yapýlýr.
+    // En iyi kaydýrma yönü, fark matrisinin toplamýný en düþük olanýdýr.
+    // En uygun kaydýrma yönüne göre img1 kaydýrýlýr.
+
+    // Ýki matris arasýndaki en iyi eþleþme bulunur.
+
+    return 0;
+}
+
