@@ -1,0 +1,1 @@
+# 1.-Kisa-Sinav-2.-Bolum-Odevi-
