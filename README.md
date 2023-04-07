@@ -1,12 +1,10 @@
 # 1.-Kisa-Sinav-2.-Bolum-Odevi-
 
 SORU 1 AÇIKLAMA:
-Algoritmanın Amacı:
+Algoritmanın Amacı: n x n boyutunda ikili, kare matrisler olarak temsil edilen iki görüntüden birinin tüm 1 bitlerini sola, sağa, aşağı, yukarı ve/veya aşağı doğru  istenilen sayıda birim kaydırarak ikinci görüntüye en çok uyacak  şekile sokmaktır.
 
+Çalışma Şekli: img1 ve img 2 olarak iki değişken tanımlanır. İlk olarak 'calculate_diff' fonksiyonu ile iki matris arasındaki farkı hesaplarız. ' Calculate_sum' fonksiyonu ile iki matris arasındaki farkın toplamı hesaplanır. En uygun kaydırma yönünü bulabilmek için 4 farklı matris tanımlanır( left_sum, rıght_sum, up_sum, down_sum) Sol yönde, sağ yönde, aşağı yönde, yukarı yönde kaydırma yapılır. En iyi kaydırma yönü fark matrisiinin toplamının en düşük olanıdır. En uygun kaydırma yönüne göre img1 kaydırılır. İki matris arasındaki en iyi eşleşme bulunur.
 
-Bu Algoritma Ne İçin Kullanılır:
-
-Çalışma Şekli:
 
 
 
